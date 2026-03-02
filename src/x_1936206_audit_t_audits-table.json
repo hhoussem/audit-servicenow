@@ -1,0 +1,222 @@
+{
+  "label": "Audit",
+  "name": "x_1936206_audit_t_audits",
+  "scope": "x_1936206_audit",
+  "extends": "sys_metadata",
+  "columns": [
+    {
+      "name": "audi_audit_nsq",
+      "type": "string",
+      "max_length": 32,
+      "primary": true,
+      "label": "Audit ID"
+    },
+    {
+      "name": "audi_audit_number_num",
+      "type": "string",
+      "max_length": 40,
+      "unique": true,
+      "label": "Audit Number",
+      "label_fr": "Numéro d'audit"
+    },
+    {
+      "name": "audi_audit_title_lib",
+      "type": "string",
+      "max_length": 255,
+      "mandatory": true,
+      "label": "Audit Title",
+      "label_fr": "Titre de l'audit"
+    },
+    {
+      "name": "audi_audit_year_num",
+      "type": "integer",
+      "mandatory": true,
+      "label": "Audit Year",
+      "label_fr": "Année d'audit"
+    },
+    {
+      "name": "audi_plan_year_num",
+      "type": "integer",
+      "label": "Plan Year",
+      "label_fr": "Année du plan"
+    },
+    {
+      "name": "ccat_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_categories",
+      "label": "Category",
+      "label_fr": "Catégorie"
+    },
+    {
+      "name": "caut_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_audit_types",
+      "label": "Audit Type",
+      "label_fr": "Type d'audit"
+    },
+    {
+      "name": "cati_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_audit_timings",
+      "label": "Timing",
+      "label_fr": "Calendrier"
+    },
+    {
+      "name": "caus_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_audit_status",
+      "mandatory": true,
+      "label": "Status",
+      "label_fr": "Statut"
+    },
+    {
+      "name": "care_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_audit_reasons",
+      "label": "Reason",
+      "label_fr": "Raison"
+    },
+    {
+      "name": "cdel_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_delegations",
+      "label": "Delegation",
+      "label_fr": "Délégation"
+    },
+    {
+      "name": "cuni_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_units",
+      "label": "Unit",
+      "label_fr": "Unité"
+    },
+    {
+      "name": "cdir_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_directorates",
+      "label": "Directorate",
+      "label_fr": "Direction"
+    },
+    {
+      "name": "audi_contract_ref_cod",
+      "type": "string",
+      "max_length": 100,
+      "label": "Contract Reference",
+      "label_fr": "Référence du contrat"
+    },
+    {
+      "name": "audi_contract_budget_amt",
+      "type": "currency",
+      "label": "Contract Budget",
+      "label_fr": "Budget du contrat"
+    },
+    {
+      "name": "audi_actual_cost_amt",
+      "type": "currency",
+      "label": "Actual Cost",
+      "label_fr": "Coût réel"
+    },
+    {
+      "name": "audi_period_start_dat",
+      "type": "date",
+      "label": "Period Start",
+      "label_fr": "Début de période"
+    },
+    {
+      "name": "audi_period_end_dat",
+      "type": "date",
+      "label": "Period End",
+      "label_fr": "Fin de période"
+    },
+    {
+      "name": "audi_rfs_dat",
+      "type": "date",
+      "label": "Request for Service Date",
+      "label_fr": "Date de demande de service"
+    },
+    {
+      "name": "audi_signature_order_dat",
+      "type": "date",
+      "label": "Signature Order Date",
+      "label_fr": "Date de signature de l'ordre"
+    },
+    {
+      "name": "audi_letter_dat",
+      "type": "date",
+      "label": "Letter Date",
+      "label_fr": "Date de la lettre"
+    },
+    {
+      "name": "audi_field_work_start_dat",
+      "type": "date",
+      "label": "Field Work Start",
+      "label_fr": "Début du travail sur le terrain"
+    },
+    {
+      "name": "audi_field_work_end_dat",
+      "type": "date",
+      "label": "Field Work End",
+      "label_fr": "Fin du travail sur le terrain"
+    },
+    {
+      "name": "audi_draft_report_dat",
+      "type": "date",
+      "label": "Draft Report Date",
+      "label_fr": "Date du rapport provisoire"
+    },
+    {
+      "name": "audi_pre_final_report_dat",
+      "type": "date",
+      "label": "Pre-Final Report Date",
+      "label_fr": "Date du rapport pré-final"
+    },
+    {
+      "name": "audi_final_report_dat",
+      "type": "date",
+      "label": "Final Report Date",
+      "label_fr": "Date du rapport final"
+    },
+    {
+      "name": "cvis_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_audit_visa_steps",
+      "label": "Current Workflow Step",
+      "label_fr": "Étape actuelle du workflow"
+    },
+    {
+      "name": "audi_workflow_context_cod",
+      "type": "string",
+      "max_length": 100,
+      "label": "Workflow Context",
+      "label_fr": "Contexte du workflow"
+    },
+    {
+      "name": "ccar_nsq",
+      "type": "reference",
+      "reference": "x_1936206_audit_t_cref_audit_cancel_reasons",
+      "label": "Cancellation Reason",
+      "label_fr": "Raison d'annulation"
+    },
+    {
+      "name": "audi_cancel_comment_txt",
+      "type": "string",
+      "max_length": 4000,
+      "label": "Cancellation Comment",
+      "label_fr": "Commentaire d'annulation"
+    },
+    {
+      "name": "audi_migrated_swi",
+      "type": "boolean",
+      "default": false,
+      "label": "Migrated",
+      "label_fr": "Migré"
+    },
+    {
+      "name": "audi_comments_txt",
+      "type": "string",
+      "max_length": 4000,
+      "label": "Comments",
+      "label_fr": "Commentaires"
+    }
+  ]
+}
